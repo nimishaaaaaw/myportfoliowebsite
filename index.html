@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nimisha Majgawali — Frontend Developer</title>
+<meta name="description" content="Nimisha Majgawali — Frontend developer crafting fun, polished user interfaces. B.Tech CS graduate, GSSoC contributor, builder of CareCrypt, SkillRadar, AgentGraph-Intel and more.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- custom cursor -->
+<div class="petal-cursor" id="petalCursor" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 3 L5 19.5 L9.3 15.6 L11.8 21.3 L14.3 20.2 L11.9 14.6 L17.5 14.3 Z"
+      fill="#3E6259" stroke="#FFFFFF" stroke-width="1.3" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+<!-- grain / texture overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="siteNav">
+  <a href="#home" class="nav-mark" aria-label="Back to top">
+    <span class="nav-mark-glyph">✕</span> NM
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" data-nav>about</a></li>
+    <li><a href="#skills" data-nav>skills</a></li>
+    <li><a href="#projects" data-nav>projects</a></li>
+    <li><a href="#experience" data-nav>experience</a></li>
+    <li><a href="#hobbies" data-nav>hobbies</a></li>
+    <li><a href="#contact" data-nav>contact</a></li>
+    <li><a href="resume/Nimisha_Majgawali_Resume.pdf" target="_blank" rel="noopener" class="nav-resume-link" data-nav>resume</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true">
+    <svg class="hero-stitch-bg" viewBox="0 0 1440 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> open to work · frontend developer</p>
+      <h1 class="hero-title">
+        Hi, I'm <span class="hero-name">Nimisha</span>.
+        <span class="hero-typed-wrap">I build <span class="hero-typed" id="typedText"></span><span class="hero-caret">|</span></span>
+      </h1>
+      <p class="hero-sub">
+        A B.Tech Computer Science graduate (minor in Health Informatics) who loves turning
+        clean code into interfaces people actually enjoy clicking around in. Equal parts
+        logic and aesthetics — and a little bit of crochet thread tangled in between.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">see my work</a>
+        <a href="resume/Nimisha_Majgawali_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">download resume</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/nimishaaaaaw" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.7 1.1.7 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" id="linkedinLink">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.2 2.4 4.2 5.4v6.3ZM5.3 7.4A2 2 0 1 1 5.3 3.4a2 2 0 0 1 0 4ZM7 20.4H3.6V9H7v11.4ZM22.2 0H1.8C.8 0 0 .8 0 1.8v20.4C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.8V1.8C24 .8 23.2 0 22.2 0Z"/></svg>
+        </a>
+        <a href="https://leetcode.com" target="_blank" rel="noopener" aria-label="LeetCode" id="leetcodeLink">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 0 5.6 8.3a2.6 2.6 0 0 0 0 3.6l5.2 5.4c1 1 2.6 1 3.6 0l2.6-2.7a1.2 1.2 0 0 0-1.8-1.7l-2.5 2.6a.6.6 0 0 1-.8 0l-5.2-5.4a.5.5 0 0 1 0-.7l7.8-8.3A1.2 1.2 0 1 0 13.5 0Zm6 14.7-2.5 2.6a3.9 3.9 0 0 1-5.6 0l-5.2-5.4a3.9 3.9 0 0 1 0-5.5L13.5.7m2.6 16.6 2 2.1a1.2 1.2 0 0 1-1.7 1.7l-2-2a1.2 1.2 0 0 1 1.7-1.8ZM8.8 12h9.6a1.2 1.2 0 1 1 0 2.4H8.8a1.2 1.2 0 0 1 0-2.4Z"/></svg>
+        </a>
+        <a href="mailto:majgawalinimisha@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm1.4 2 8.1 6.5a1 1 0 0 0 1 0L20.6 6H3.4ZM2 6.7V18h20V6.7l-8.2 6.5a3 3 0 0 1-3.6 0L2 6.7Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-portrait-wrap">
+      <div class="hero-portrait-backing" aria-hidden="true"></div>
+      <img src="img/nimisha-portrait.webp" alt="Portrait of Nimisha Majgawali" class="hero-portrait" width="884" height="1100" />
+      <div class="hero-sticker hero-sticker-1">frontend dev ✕</div>
+      <div class="hero-sticker hero-sticker-2">GSSoC '26 contributor</div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+    <span>scroll</span>
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v15M12 19l-6-6M12 19l6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="section-head">
+    <p class="section-tag">01 · about</p>
+    <h2 class="section-title">a little about me</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-card bio-card">
+      <p class="bio-text">
+        I'm a final-year <strong>B.Tech Computer Science</strong> graduate with a minor in
+        <strong>Health Informatics</strong>, and an aspiring <strong>frontend developer</strong>
+        at heart. The front end is the first thing a person ever touches on a website — it's
+        what they notice, what they trust (or don't), and what makes something feel easy
+        instead of frustrating. I genuinely love building that layer: the small interactions,
+        the little transitions, the details most people won't consciously notice but would
+        definitely miss if they were gone.
+      </p>
+      <p class="bio-text">
+        It's also just where my creative side gets to come out and play. Right now I'm
+        deep in personal projects to round out my portfolio, picking up <strong>Next.js</strong>
+        (with <strong>Angular</strong> on the someday-list), and feeding a small, growing
+        addiction to AI tools that make my workflow faster and my output better.
+      </p>
+      <p class="bio-quirk">also: certified makeup hoarder, 100% by choice. 💄</p>
+    </div>
+
+    <div class="about-card status-card">
+      <p class="status-label">availability</p>
+      <p class="status-value"><span class="status-dot"></span> open to work</p>
+      <p class="status-note">currently interning, but always happy to talk about what's next.</p>
+      <div class="status-rule"></div>
+      <p class="status-label">based in</p>
+      <p class="status-value-sm">Bhilai, Chhattisgarh, India 🇮🇳</p>
+      <p class="status-label" style="margin-top:14px;">usually replies within</p>
+      <p class="status-value-sm">24 hours</p>
+    </div>
+
+    <div class="about-card stats-card">
+      <p class="status-label">a few numbers</p>
+      <div class="stat-row">
+        <span class="stat-number">9+</span>
+        <span class="stat-label">projects shipped</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-number">2</span>
+        <span class="stat-label">internships completed</span>
+      </div>
+      <div class="stat-row stat-row-last">
+        <span class="stat-number">8.63</span>
+        <span class="stat-label">GPA / 10</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider section-divider-alt" aria-hidden="true"></div>
+
+<!-- ============ SKILLS ============ -->
+<section class="skills" id="skills">
+  <div class="section-head">
+    <p class="section-tag">02 · skills</p>
+    <h2 class="section-title">tools of the trade</h2>
+    <p class="section-desc">What I reach for most, grouped the way I actually think about them.</p>
+  </div>
+
+  <div class="skills-grid" id="skillsGrid">
+    <!-- filled by JS -->
+  </div>
+
+  <div class="skills-soft">
+    <p class="soft-label">and the less measurable stuff —</p>
+    <div class="soft-tags">
+      <span class="soft-tag">problem solving</span>
+      <span class="soft-tag">adaptability</span>
+      <span class="soft-tag">attention to detail</span>
+      <span class="soft-tag">calm under pressure</span>
+      <span class="soft-tag">clear communication</span>
+      <span class="soft-tag">a creative streak</span>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+<!-- ============ PROJECTS ============ -->
+<section class="projects" id="projects">
+  <div class="section-head">
+    <p class="section-tag">03 · projects</p>
+    <h2 class="section-title">things I've built</h2>
+    <p class="section-desc">A few of these are pinned because they were the most fun to get wrong before getting right.</p>
+  </div>
+
+  <div class="projects-featured" id="projectsFeatured"></div>
+
+  <div class="projects-more-head">
+    <p class="more-label">more from the workshop</p>
+  </div>
+  <div class="projects-grid" id="projectsGrid"></div>
+</section>
+
+<div class="section-divider section-divider-alt" aria-hidden="true"></div>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="experience" id="experience">
+  <div class="section-head">
+    <p class="section-tag">04 · experience</p>
+    <h2 class="section-title">where I've worked</h2>
+  </div>
+
+  <div class="timeline" id="timeline"></div>
+
+  <div class="education-block">
+    <p class="section-tag" style="margin-top:0;">education & certifications</p>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <p class="edu-school">VIT Bhopal University</p>
+        <p class="edu-detail">B.Tech, Computer Science · Minor in Health Informatics</p>
+        <p class="edu-meta">2022 – 2026 &nbsp;·&nbsp; GPA 8.63/10</p>
+      </div>
+      <div class="cert-card">
+        <p class="edu-school">Certifications</p>
+        <ul class="cert-list">
+          <li>Applied Machine Learning in Python — University of Michigan</li>
+          <li>Cloud Architecting — AWS Academy Graduate</li>
+          <li>Cloud Foundations — AWS Academy Graduate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="gssoc-block">
+    <img src="img/gssoc-contributor.png" alt="GirlScript Summer of Code 2026 Contributor badge" loading="lazy" width="150" height="150">
+    <div>
+      <p class="gssoc-title">GirlScript Summer of Code 2026 — Contributor</p>
+      <p class="gssoc-text">Open-source contributor for GSSoC 2026, building, collaborating, and shipping alongside a community of devs outside my day-to-day work.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+<!-- ============ HOBBIES ============ -->
+<section class="hobbies" id="hobbies">
+  <div class="section-head">
+    <p class="section-tag">05 · off-screen</p>
+    <h2 class="section-title">when I'm not at the keyboard</h2>
+    <p class="section-desc">Code is most of it, but not all of it.</p>
+  </div>
+
+  <div class="hobby-cloud" id="hobbyCloud"></div>
+
+  <div class="spotify-block">
+    <p class="spotify-block-label">
+      <span class="spotify-pulse" aria-hidden="true"></span>
+      currently listening to
+    </p>
+    <a href="https://open.spotify.com/track/6pXvUGmcypzmUlTMlgkGhy" target="_blank" rel="noopener" class="spotify-embed-link">
+      <iframe title="Spotify currently listening" src="https://open.spotify.com/embed/track/6pXvUGmcypzmUlTMlgkGhy?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </a>
+  </div>
+
+  <div class="bucket-list">
+    <p class="bucket-label">📍 on the bucket list</p>
+    <p class="bucket-text">Solo travelling to as many cities &amp; countries as I can talk myself into — one trip, one ticket, one slightly nervous first day at a time.</p>
+  </div>
+</section>
+
+<div class="section-divider section-divider-alt" aria-hidden="true"></div>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <p class="section-tag" style="justify-content:center;">06 · say hi</p>
+    <h2 class="contact-title">Let's build something <span>nice</span> together.</h2>
+    <p class="contact-sub">Whether it's a role, a project, or just talking shop about clean UI — my inbox is open.</p>
+
+    <a href="mailto:majgawalinimisha@gmail.com" class="contact-email">majgawalinimisha@gmail.com</a>
+
+    <div class="contact-links">
+      <a href="https://github.com/nimishaaaaaw" target="_blank" rel="noopener">GitHub</a>
+      <span class="dot">·</span>
+      <a href="#" id="contactLinkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="dot">·</span>
+      <a href="#" id="contactLeetcode" target="_blank" rel="noopener">LeetCode</a>
+      <span class="dot">·</span>
+      <a href="tel:+918962763616">+91 89627 63616</a>
+    </div>
+
+    <a href="resume/Nimisha_Majgawali_Resume.pdf" target="_blank" rel="noopener" class="btn btn-primary contact-resume-btn">download resume ↓</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>designed &amp; built by Nimisha Majgawali · <span id="footerYear"></span></p>
+  <p class="footer-quote">"good UI is invisible. good UX is unforgettable."</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
