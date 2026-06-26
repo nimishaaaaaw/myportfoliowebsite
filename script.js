@@ -368,7 +368,7 @@ const experience = [
   {
     role: 'Front-End Developer Intern',
     org: 'MediKloud (Healthcare SaaS)',
-    date: 'Apr 2026 – Present',
+    date: 'Apr 2026 – June 2026',
     points: [
       'Refactored a fragmented production React/TypeScript codebase into a component-driven design system, eliminating hardcoded styling via a centralised Tailwind CSS token architecture.',
       'Documented component props and usage patterns in Storybook, improving isolation, testability, and onboarding for future contributors.',
